@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as vars;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+:root {
+  --font-primary: #{vars.$font-primary};
+  --type-base: 16px;
+  --container-w: #{vars.$container-w};
+}
+
+* {
+  font-family: var(--font-primary);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height:1.05;
+  margin:0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin:0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin:0;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height:1.45;
+  margin:0;
+  color:var(--muted);
+}
+
+.small {
+  font-size: .85rem;
+}
+
+.bold {
+  font-weight:800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

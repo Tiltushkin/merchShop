@@ -1,0 +1,7 @@
+@use 'abstracts/variables' as*;
+
+@use 'base/reset' as*;
+@use 'base/typography' as*;
+@use 'base/theme' as*;
+
+:root { --container-w: 1200px; }

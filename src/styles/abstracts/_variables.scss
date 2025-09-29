@@ -1,0 +1,36 @@
+$font-primary: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+$g-black: #06050a;
+$g-dark-1: #0f1015;
+$g-dark-2: #0b0d12;
+
+$neon-teal: rgba(0, 214, 178, 0.75);
+$neon-magenta: #ff3ca6;
+$neon-amber: #ffb55c;
+$neon-blue: #4bb0ff;
+
+$lt-bg: #f4f6fb;
+$lt-surface: #ffffff;
+$lt-muted: #6b7280;
+
+$white: #ffffff;
+$muted-1: #9aa4b2;
+
+$success: #18d88a;
+$danger: #ff5c7c;
+
+$shadow-soft: 0 6px 22px rgba(2,6,23,0.28);
+$shadow-hard: 0 10px 30px rgba(0,0,0,0.6);
+
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-pill: 999px;
+
+$container-w: 1200px;
+
+$space-xxs: 4px; $space-xs: 8px; $space-sm: 12px; $space-md: 18px; $space-lg: 28px; $space-xl: 48px;
+
+$motion-fast: 160ms;
+$motion-medium: 280ms;
+$motion-slow: 420ms;
+$ease-in-out-soft: cubic-bezier(.22,.9,.32,1);

@@ -1,0 +1,126 @@
+@use "../../styles/abstracts/variables" as *;
+
+:root {
+  --card-height: 320px;
+  --media-height: 190px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: var(--card-height);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+  box-shadow: var(--box-shadow);
+  transition: transform .18s var(--ease-in-out-soft), box-shadow .18s var(--ease-in-out-soft);
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba(0,255,209,0.08);
+    outline-offset: 4px;
+  }
+}
+
+.defaultCard {
+  --card-height: 390px;
+  --media-height: 260px;
+}
+
+.poster {
+  --card-height: 410px;
+  --media-height: 280px;
+}
+
+.media {
+  height: var(--media-height);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-color: var(--card-media-bg);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 12px;
+  position: relative;
+}
+
+.badge {
+  background: linear-gradient(90deg, var(--primary), color-mix(in srgb, var(--primary) 60%, transparent));
+  color: white;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  gap: 10px;
+}
+
+.left {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.50;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.right {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:8px;
+}
+
+.price, .subprice {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.subprice {
+  color: var(--primary);
+}
+
+.buy {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  max-height: 40px;
+  text-wrap: nowrap;
+
+  &:active { transform: scale(.98); }
+  &:hover { box-shadow: 0 10px 26px rgba(0,0,0,0.36); }
+  &:focus-visible { outline: 3px solid rgba(0,255,209,0.08); outline-offset: 4px; }
+}

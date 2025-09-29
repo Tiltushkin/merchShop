@@ -1,0 +1,87 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/base/theme' as *;
+
+.wrapper {
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+  padding: 6px 0 60px;
+}
+
+.headerRow {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+  flex-wrap:wrap;
+}
+
+.categories {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.catBtn {
+  padding:10px 16px;
+  border-radius:999px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor:pointer;
+  font-weight:800;
+  position:relative;
+  overflow:hidden;
+}
+
+.catBtn:hover {
+  color: var(--text);
+  transform: translateY(-4px);
+}
+
+.catBtn.active {
+  color: var(--white);
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+
+.controls {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.search {
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  min-width:300px;
+  color:var(--text);
+}
+
+.select { padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:var(--card-bg); color:var(--text); }
+
+.filtersRow { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+
+.range { display:flex; gap:8px;
+  input { padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:var(--card-bg); color:var(--text); width:130px; }
+}
+
+.pagerControls { display:flex; gap:12px; align-items:center; }
+.count { color:var(--muted); }
+
+.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; margin-top: 6px; }
+
+.empty { padding: 36px; text-align:center; color: var(--muted); grid-column: 1 / -1; }
+
+.pagination { display:flex; gap:8px; align-items:center; justify-content:center; margin-top: 8px;
+  button { padding:8px 10px; border-radius:10px; border:none; background: var(--card-bg); color:var(--text); cursor:pointer;
+    &:disabled{ opacity:.45; pointer-events:none; }
+  }
+  .pageInfo{ color:var(--muted); padding:6px 10px; }
+}
+
+.productCard { @extend .surface-glass; border-radius: 14px; padding: 12px; transition: transform var(--motion-fast) var(--ease-in-out-soft), box-shadow var(--motion-fast);
+  &:hover{ transform: translateY(-6px) scale(1.01); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+}

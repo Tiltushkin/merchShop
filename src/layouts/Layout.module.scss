@@ -1,0 +1,124 @@
+@use '../styles/abstracts/variables' as *;
+
+:global(html) { --container-w: 1200px; }
+
+.header {
+  width: 100%;
+  background: var(--header-bg);
+  height: 84px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+
+  &__content {
+    width: min(var(--container-w), 96%);
+    margin: 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+
+  .title {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:900;
+    font-size:1.05rem;
+    color: var(--text);
+  }
+
+  .logoBadge {
+    width:44px; height:44px; border-radius:10px;
+    display:grid; place-items:center;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    box-shadow: 0 6px 24px rgba(0,0,0,0.45);
+  }
+
+  .actions { display:flex; gap:12px; align-items:center; }
+
+  .themeBtn {
+    background: linear-gradient(90deg, rgba(255,255,255,0.03), transparent);
+    border: 1px solid rgba(255,255,255,0.04);
+    color:var(--text);
+    padding: 9px 12px;
+    border-radius: 12px;
+    cursor:pointer;
+    font-weight:700;
+  }
+
+  .cartIcon {
+    width:44px;
+    height:44px;
+    border-radius:12px;
+    padding:8px;
+    background: var(--card-bg);
+    display:block;
+    box-shadow: var(--box-shadow);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.layout {
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  background:var(--bg);
+}
+
+.content {
+  flex:1;
+  width:min(var(--container-w), 96%);
+  margin: 28px auto;
+  padding: 0;
+}
+
+.footer {
+  width:100%;
+  background:var(--header-bg);
+  padding: 32px 0;
+  border-top: 1px solid rgba(255,255,255,0.02);
+
+  &__content {
+    width: min(var(--container-w), 96%);
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 14px;
+  }
+}
+
+.cartWrap {
+  position: relative;
+}
+
+.cartBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.cartIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.cartCount {
+  background: var(--primary);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+}

@@ -1,0 +1,101 @@
+@use "../../styles/abstracts/variables" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.90);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 1200;
+  padding: 24px;
+}
+
+.modal {
+  width: min(960px, 96%);
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(2,6,23,0.6);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.close {
+  position:absolute;
+  right:12px;
+  top:12px;
+  background: rgba(0,0,0,0.06);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: var(--text);
+  transition: transform var(--motion-fast);
+}
+
+.body {
+  display:flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+.left {
+  flex: 1 1 45%;
+  height: 420px;
+  background-position:center;
+  background-size:cover;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.right {
+  flex: 1 1 55%;
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+  color: var(--text);
+}
+
+.price, .newPrice {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.newPrice {
+  color: var(--primary);
+}
+
+.desc {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.actions {
+  margin-top: auto;
+  display:flex;
+  gap: 10px;
+}
+
+.primary {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.36);
+}
+
+.ghost {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
